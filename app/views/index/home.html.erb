@@ -1,0 +1,24 @@
+<div class="bs-header">
+	<div class="container">
+		<div class="col-md-3 col-md-offset-6" id="quiz-question">
+			<h3><%= @sample.category.title %></h3>
+			<h4><%= @sample.question %></h4>
+			<p><%= @sample.answer.html_safe %></p>
+			<%= @sample.value %>
+		</div>
+		<div class="col-med-1">
+			<span class="glyphicon glyphicon-refresh" id='refresh-question'></span>
+		</div>
+	</div>
+</div>
+
+<script id="quiz-template" type="text/x-handlebars-template">
+	<p>Difficulty: {{value}}</p>
+	<h3>{{category.title}}</h3>
+	<h4>{{question}}</h4>
+	<input type="text" id="my-answer" />
+	<a class="btn btn-primary" id="submit-answer">Submit</a>
+	<input type="hidden" id="correct-answer" value="{{answer}}"/>
+	<p id="show-answer"></p>
+</script>
+

@@ -1,4 +1,14 @@
 JArchive::Application.routes.draw do
+  
+  get "api/random" => "api#random"
+  get "index/home"
+  get "index/about"
+  resources :game_ids
+
+  resources :categories
+
+  resources :clues
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +58,7 @@ JArchive::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'index#home'
 
   # See how all your routes lay out with "rake routes"
 

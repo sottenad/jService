@@ -1,0 +1,28 @@
+@import "bootstrap";
+
+body{
+	margin-top:50px;
+}
+ .navbar{
+	margin-bottom:0;
+}
+
+.bs-masthead, .bs-header {
+	position: relative;
+	padding: 30px 15px;
+	color: #bfcae3;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(0,0,0,.1);
+	background-color: #654669;
+	background-image: -webkit-linear-gradient(top,#3d537c 0,#546699 100%);
+	background-image: linear-gradient(to bottom,#3d537c 0,#546699 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d537c', endColorstr='#546699', GradientType=0);
+}
+
+.bs-header h3{
+	text-transform:capitalize;
+}
+.bs-header h4{
+	line-height: 1.5em
+}

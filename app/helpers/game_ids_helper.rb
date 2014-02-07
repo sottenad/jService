@@ -1,0 +1,2 @@
+module GameIdsHelper
+end
