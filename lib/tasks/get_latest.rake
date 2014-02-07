@@ -1,5 +1,5 @@
 
-  task :get_prices => :environment do
+  task :get_clues => :environment do
   	require 'nokogiri'
   	require 'open-uri'
   	require 'chronic'
