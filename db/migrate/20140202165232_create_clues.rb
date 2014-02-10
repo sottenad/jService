@@ -4,7 +4,6 @@ class CreateClues < ActiveRecord::Migration
       t.string :answer
       t.string :question
       t.integer :value
-      t.string :category
       t.datetime :airdate
 
       t.timestamps
