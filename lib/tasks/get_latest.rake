@@ -17,7 +17,6 @@
   			href = ll.attr('href');
   			href = href.split('id=')
   			hrefId = href[1]
-
   			gameIds.push(hrefId)
   			puts "new id: " +hrefId.to_s
   		end

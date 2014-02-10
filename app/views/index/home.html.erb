@@ -1,24 +1,60 @@
 <div class="bs-header">
 	<div class="container">
-		<div class="col-md-3 col-md-offset-6" id="quiz-question">
-			<h3><%= @sample.category.title %></h3>
-			<h4><%= @sample.question %></h4>
-			<p><%= @sample.answer.html_safe %></p>
-			<%= @sample.value %>
+		<div class="col-md-5">
+			<%= image_tag ("trebek.png") %>
 		</div>
-		<div class="col-med-1">
-			<span class="glyphicon glyphicon-refresh" id='refresh-question'></span>
+		<div class="col-md-7">
+			<h1>jService</h1>
+			<h2>108,000+ Trivia Questions</h2>
+			<p>A set of trivia services by <a href="http://github.com/sottenad">@sottenad</a></p>
+			<p><a href="https://github.com/sottenad/jService" class="btn btn-primary btn-large">View On Github</a></p>
 		</div>
 	</div>
 </div>
 
+<div class="container">
+	<div class="col-md-7">
+		<h3>About</h3>
+		<p>This is in large part a project to learn a bit about screen-scraping and creating an easily consumable set of services for public consumption. I will be offering this free of charge, but on a very small Heroku instance until sufficient demand exists. That said, please don't use this for production purposes without grabbing the project and hosting it elsewhere, as I cannot ensure performance.</p>
+		<h3>Usage</h3>
+		<p>jService exposes two endpoints, <code>/api/random</code> and <code>/api/clues</code>. Use random to pull a random clues from all 30 years, or use clues to filter your clues.</p>
+		<h4>/Clues</h4>
+		<ul>
+			<li>Url: <code>/api/clues</code></li>
+			<li>Options (POST or GET data):
+				<ul>
+					<li><code>value</code>(int): the value of the clue in dollars</li>
+					<li><code>min_date</code>(date): earliest date to show, based on original air date</li>
+					<li><code>max_date</code>(date): latest date to show, based on original air date</li>
+					<li><code>offset</code>(int): offsets the displayed clues when returning more than 1	00</li>
+				</ul>
+		</ul> 
+		<h4>/Random</h4>
+		<ul>
+			<li>Url: <code>/api/random</code></li>
+			<li>Options (POST or GET data):
+				<ul>
+					<li><code>count</code>(int): amount of clues to return, limited to 100 at a time</li>
+				</ul>
+		</ul>
+	</div>
+	<div class="col-md-5">
+		<div class="panel panel-default" id="quiz-question">
+			<div class="panel-heading">
+				<h4>Random Question<span class="glyphicon glyphicon-refresh" id='refresh-question'></span></h4>
+				
+			</div>
+			<div class="panel-body">
+
+			</div>
+		</div>
+	</div>	
+</div>
+
 <script id="quiz-template" type="text/x-handlebars-template">
 	<p>Difficulty: {{value}}</p>
-	<h3>{{category.title}}</h3>
-	<h4>{{question}}</h4>
-	<input type="text" id="my-answer" />
-	<a class="btn btn-primary" id="submit-answer">Submit</a>
-	<input type="hidden" id="correct-answer" value="{{answer}}"/>
-	<p id="show-answer"></p>
+	<h3>{{{category.title}}}</h3>
+	<h4>{{{question}}}</h4>
+	<p id="show-answer">{{{answer}}}</p>
 </script>
 
