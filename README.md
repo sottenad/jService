@@ -1,5 +1,8 @@
 ##jService
 
+###demo
+View a working demo at http://jservice.herokuapp.com
+
 ###installation
 * clone this repo 
 * cd into the directory, start run `rails s`
