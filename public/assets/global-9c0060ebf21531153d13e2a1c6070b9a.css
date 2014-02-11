@@ -1,0 +1,46 @@
+@import url(bootstrap.css);
+body {
+  margin-top: 0px;
+  font: 14px/24px "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.navbar {
+  margin-bottom: 0; }
+
+.bs-masthead, .bs-header {
+  position: relative;
+  padding: 50px 15px 0 15px;
+  color: #444;
+  text-align: left;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background-color: #A4DFDA;
+  margin-bottom: 60px; }
+
+.bs-header a.btn, .bs-header a.btn:link, .bs-header a.btn:visited, .bs-header a.btn:hover, .bs-header a.btn:active {
+  color: #fff; }
+
+.bs-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 100px;
+  color: #777;
+  border-top: 1px solid #e5e5e5; }
+
+h1 {
+  font-size: 85px;
+  line-height: 1.3em;
+  font-weight: bold; }
+
+h2 {
+  font-size: 45px;
+  line-height: 1.3em;
+  margin-bottom: 1em; }
+
+.bs-header h4 {
+  line-height: 1.5em; }
+
+#refresh-question {
+  float: right;
+  cursor: pointer; }
+
+.panel-body {
+  text-align: center; }
