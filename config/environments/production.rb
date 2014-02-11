@@ -21,6 +21,8 @@ JArchive::Application.configure do
   config.assets.digest = true
   
   config.eager_load = true;
+  
+  config.assets.precompile = [/^[-_a-zA-Z0-9]*\..*/]
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
