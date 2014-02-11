@@ -60,7 +60,8 @@ module JArchive
     #config.assets.initialize_on_precompile = true
     
     config.assets.precompile += [
-      'application.css'
+      'application.css',
+      'global.css'
     ]
 
     # Version of your assets, change this if you want to expire all your assets
