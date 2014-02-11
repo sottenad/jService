@@ -23,6 +23,8 @@ gem 'jquery-rails'
 
 gem 'bootstrap-sass', '~> 3.1.0'
 
+gem 'rails_12factor', group: :production
+
 #for scraping
 gem 'nokogiri'	
 gem 'chronic'
