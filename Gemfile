@@ -11,7 +11,7 @@ gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', '>=4.0.0'
+
   gem 'coffee-rails', '~> 4.0.0'
   
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -21,6 +21,7 @@ end
 
 gem 'jquery-rails'
 
+gem 'sass-rails', '>=4.0.0'
 gem 'bootstrap-sass', '~> 3.1.0'
 
 gem 'rails_12factor', group: :production
