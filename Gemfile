@@ -19,6 +19,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+#adding to remedy prod asset issues
+group :production do
+ 	gem 'rails_12factor'
+ end
+
 gem 'jquery-rails'
 
 gem 'twitter-bootstrap-rails'

@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+
+ 
+ */
+@import url(global.css);
+@import url(bootstrap.css);
+body {
+  margin-top: 0px;
+  font: 14px/24px "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.navbar {
+  margin-bottom: 0; }
+
+.bs-masthead, .bs-header {
+  position: relative;
+  padding: 50px 15px 0 15px;
+  color: #444;
+  text-align: left;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background-color: #A4DFDA;
+  margin-bottom: 60px; }
+
+.bs-header a.btn, .bs-header a.btn:link, .bs-header a.btn:visited, .bs-header a.btn:hover, .bs-header a.btn:active {
+  color: #fff; }
+
+.bs-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 100px;
+  color: #777;
+  border-top: 1px solid #e5e5e5; }
+
+h1 {
+  font-size: 85px;
+  line-height: 1.3em;
+  font-weight: bold; }
+
+h2 {
+  font-size: 45px;
+  line-height: 1.3em;
+  margin-bottom: 1em; }
+
+.bs-header h4 {
+  line-height: 1.5em; }
+
+#refresh-question {
+  float: right;
+  cursor: pointer; }
+
+.panel-body {
+  text-align: center; }
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #000; }
+  a:visited {
+    color: #666; }
+  a:hover {
+    color: #fff;
+    background-color: #000; }
+
+div.field, div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+  #error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  #error_explanation ul li {
+    font-size: 12px;
+    list-style: square; }
