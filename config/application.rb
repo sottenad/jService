@@ -61,7 +61,8 @@ module JArchive
     
     config.assets.precompile += [
       'application.css',
-      'global.css'
+      'global.css',
+      'bootstrap.css'
     ]
 
     # Version of your assets, change this if you want to expire all your assets
