@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require moment.min
 //= require index
 //= require popular
 //= require api
