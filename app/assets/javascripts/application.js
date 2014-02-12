@@ -12,6 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require bootstrap
+//= require index
+//= require popular
+//= require api
+//= require handlebars-v1.3.0
+//= require handlebars-helpers
 
 
