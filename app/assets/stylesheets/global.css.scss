@@ -38,6 +38,10 @@ nav .link_home{
 	color:#fff;
 }
 
+.bs-header img{
+	max-width: 90%;
+}
+
 .bs-footer {
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -67,4 +71,9 @@ h2{
 
 .panel-body{
 
+}
+@media (max-width:700px){
+	h1{font-size:36px;}
+	h2{font-size:28px;}
+	
 }
