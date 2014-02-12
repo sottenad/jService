@@ -1,5 +1,6 @@
 JArchive::Application.routes.draw do
   
+  get "popular/index"
   get "api/random" => "api#random",  defaults: {format: :json}
   get "api/clues" => "api#clues", defaults: {format: :json}
   get "index/home"
