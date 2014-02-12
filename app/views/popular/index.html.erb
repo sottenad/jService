@@ -1,6 +1,9 @@
-
+<%= render "layouts/menu" %>
+<div class="container">
+<h3>Popular Categories</h3>
 <ul>
 <% @list.each do |i| %>
 	<li><%= link_to i.title, popular_list_path(i.id) %> - Clues: <%= i.clues_count %></li>
 <% end %>
 </ul>
+</div>

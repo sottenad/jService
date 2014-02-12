@@ -4,6 +4,7 @@ class PopularController < ApplicationController
   	@list = Category.where("clues_count > 100").order("clues_count DESC")
   end
   def list
-  	@list = Clue.where("category_id = ? AND question != ''", params[:category_id])
+  	@category = Category.find(params[:category_id])
+  	@list = Clue.where("category_id = ? AND question != ''", params[:category_id]).order("airdate DESC, value ASC")
   end
 end

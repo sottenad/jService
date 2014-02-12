@@ -4,8 +4,21 @@ body{
 	margin-top:0px;
 	font: 14px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
- .navbar{
-	margin-bottom:0;
+nav{
+	margin-bottom:10px;
+	background:#A4DFDA;
+	padding:0 20px;
+}
+nav li{
+	list-style-type: none;
+}
+nav li a{
+	display: inline-block;
+	padding:10px;
+}
+nav .link_home{
+	background:url(trebek_small.png) no-repeat;
+	padding-left:40px;
 }
 
 .bs-masthead, .bs-header {
