@@ -4,7 +4,8 @@ class AddClueCount < ActiveRecord::Migration
     
     Category.reset_column_information
     Category.all.each do |p|
-      p.update_attribute :clues_count, p.clues.length
+      Category.reset_counters(p.id,:clues)
+      #p.update_attribute :clues_count, p.clues.length
     end
   end
 

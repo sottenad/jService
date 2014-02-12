@@ -1,6 +1,6 @@
-<h3>Count: <%= @count =%>
+
 <ul>
 <% @list.each do |i| %>
-	<li><%= i.title %> - Clues: <%= i.clues_count %></li>
+	<li><%= link_to i.title, popular_list_path(i.id) %> - Clues: <%= i.clues_count %></li>
 <% end %>
 </ul>
