@@ -9,7 +9,7 @@ class ApiController < ApplicationController
 		
 		@result = Clue.all(offset: randNum, :limit => count)
 		
-
+		
 		
 		respond_to do |format|
 			format.json { render :json => @result.to_json(:include => :category) }
@@ -26,7 +26,8 @@ class ApiController < ApplicationController
 			conditions.push "airdate < ?", Chronic.parse(params[:min_date]) if params[:min_date].present?
 			conditions.push "airdate > ?", Chronic.parse(params[:max_date]) if params[:max_date].present?
 		end
-		
+
+		conditions.push "category_id = ?", params[:category] if params[:category].present?	
 		offset = params[:offset].present? ? params[:offset] : 0
 
 		@result = Clue.all(:conditions => conditions, :limit => 100, :offset => offset )

@@ -14,16 +14,15 @@
 
 <div class="container">
 	<div class="col-md-7">
-		<h3>About</h3>
-		<p>This is in large part a project to learn a bit about screen-scraping and creating an easily consumable set of services for public consumption. I will be offering this free of charge, but on a very small Heroku instance until sufficient demand exists. That said, please don't use this for production purposes without grabbing the project and hosting it elsewhere, as I cannot ensure performance.</p>
-		<h3>Usage</h3>
+		<h3>API Usage</h3>
 		<p>jService exposes two endpoints, <code>/api/random</code> and <code>/api/clues</code>. Use random to pull a random clues from all 30 years, or use clues to filter your clues.</p>
 		<h4>/Clues</h4>
 		<ul>
 			<li>Url: <code>/api/clues</code></li>
-			<li>Options (POST or GET data):
+			<li>Options (POST or GET data) <small class="text-warning">All options are optional</small>:
 				<ul>
 					<li><code>value</code>(int): the value of the clue in dollars</li>
+					<li><code>category</code>(int): the id of the category you want to return</li>
 					<li><code>min_date</code>(date): earliest date to show, based on original air date</li>
 					<li><code>max_date</code>(date): latest date to show, based on original air date</li>
 					<li><code>offset</code>(int): offsets the displayed clues when returning more than 1	00</li>
@@ -37,6 +36,17 @@
 					<li><code>count</code>(int): amount of clues to return, limited to 100 at a time</li>
 				</ul>
 		</ul>
+		<hr />
+		<h3>Popular</h3>
+		<p>Jeopardy&reg; is constantly adding more clues to the same popular categories. The categories/clues are stored relationally so we can view the most popular categories, or view all clues associated with a particular category, given its id.</p>
+		<p><%= link_to "View Popular Categories", popular_path, :class => 'btn btn-default' %></p>
+		<hr />
+		<h3>About</h3>
+		<p>This is in large part a project to learn a bit about screen-scraping and creating an easily consumable set of services for public consumption. I will be offering this free of charge, but on a very small Heroku instance until sufficient demand exists. That said, please don't use this for production purposes without grabbing the project and hosting it elsewhere, as I cannot ensure performance.</p>
+		
+		
+		
+		
 	</div>
 	<div class="col-md-5">
 		<div class="panel panel-default" id="quiz-question">
@@ -52,9 +62,32 @@
 </div>
 
 <script id="quiz-template" type="text/x-handlebars-template">
-	<p>Difficulty: {{value}}</p>
-	<h3>{{{category.title}}}</h3>
-	<h4>{{{question}}}</h4>
-	<p id="show-answer">{{{answer}}}</p>
+	<table class="table table-hover table-bordered">
+		<tr>
+			<td><strong>Difficulty</strong></td>
+			<td>{{value}}</td>
+		</tr>
+		<tr>
+			<td><strong>Category</strong></td>
+			<td>{{{category.title}}}</td>
+		</tr>
+		<tr>
+			<td><strong>Question</strong></td>
+			<td>{{{question}}}</td>
+		</tr>
+		<tr>
+			<td><strong>Answer</strong></td>
+			<td>{{{answer}}}</td>
+		</tr>
+		<tr>
+			<td><strong>Air Date</strong></td>
+			<td>{{clean_time airdate}}</td>
+		</tr>
+
+	</table>
+	<h5 class="left">Raw Response</h5>
+	<div class="raw">
+		<pre>{{json .}}</pre>
+	</div>
 </script>
 

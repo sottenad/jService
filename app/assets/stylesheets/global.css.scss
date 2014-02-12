@@ -5,9 +5,13 @@ body{
 	font: 14px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 nav{
-	margin-bottom:10px;
+
 	background:#A4DFDA;
 	padding:0 20px;
+}
+nav ul{
+	margin:0;
+	padding:0;
 }
 nav li{
 	list-style-type: none;
@@ -62,5 +66,5 @@ h2{
 }
 
 .panel-body{
-	text-align: center;
+
 }

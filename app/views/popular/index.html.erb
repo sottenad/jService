@@ -1,9 +1,26 @@
 <%= render "layouts/menu" %>
+
+<ol class="breadcrumb">
+  <li><%= link_to "Popular Categories" %></li>
+</ol>
+
 <div class="container">
 <h3>Popular Categories</h3>
-<ul>
-<% @list.each do |i| %>
-	<li><%= link_to i.title, popular_list_path(i.id) %> - Clues: <%= i.clues_count %></li>
-<% end %>
-</ul>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Clue Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @list.each do |cat| %>
+      <tr>
+        <td><%= link_to cat.title.titleize, popular_list_path(cat.id) %></td>
+        <td><%= cat.clues_count %></td>
+
+              </tr>
+    <% end %>
+  </tbody>
+</table>
 </div>

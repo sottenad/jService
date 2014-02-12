@@ -1,7 +1,12 @@
 <%= render "layouts/menu" %>
 <%- model_class = Clue -%>
+<ol class="breadcrumb">
+  <li><%= link_to "Popular Categories", popular_path %></li>
+  <li><%= link_to @category.title.titleize %></li>
+</ol>
+
 <div class="container">
-<h3>Clues for: <%= @category.title %></h3>
+<h3>Clues for: <%= @category.title.titleize %></h3>
 <table class="table table-striped">
   <thead>
     <tr>
