@@ -1,7 +1,7 @@
 ##jService
 
 ###demo
-View a working demo at http://jservice.herokuapp.com
+View a working demo at http://jservice.io
 
 ###installation
 * clone this repo 
