@@ -1,7 +1,7 @@
 
 
 
-
+ #Arguments are seasons to grab. [1,30] grabs seasons 1 through 30
   task :get_clues, [:arg1,:arg2]  => :environment  do |t, args|
   	require 'nokogiri'
   	require 'open-uri'
