@@ -78,7 +78,8 @@
 		  			:answer => var_answer,
 		  			:category => var_category,
 		  			:value => var_value,
-		  			:airdate => var_airdate
+		  			:airdate => var_airdate,
+		  			:game_id => gid
 		  		).first_or_create
 		  		
 		  		
