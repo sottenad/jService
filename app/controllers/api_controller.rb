@@ -7,8 +7,8 @@ class ApiController < ApplicationController
 			count = 100
 		end
 		
-		@result = Clue.all(offset: randNum, :limit => count)
-		
+		#@resut = Clue.all(offset: randNum, :limit => count)
+		@result = Clue.where({:id => 48793})
 		
 		
 		respond_to do |format|
@@ -59,6 +59,17 @@ class ApiController < ApplicationController
 		  format.json { render :json => @category.to_json(:include => { :clues => { :except => [:created_at, :updated_at]}}) }
 		end
 	end
+    
+    def mark_invalid
+        @clue = Clue.find(params[:id])
+        @clue.increment(:invalid_count,1)
+        @clue.save
+        
+        respond_to do |format|
+            format.json {render :json => @clue.to_json() }    
+        end
+        
+    end
 	
 	
 end

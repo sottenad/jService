@@ -1,3 +1,8 @@
+<% content_for :title do %>
+    jService - Over <%= number_with_delimiter(@count.round(-2)) %> trivia questions
+<% end %>
+
+
 <div class="bs-header">
 	<div class="container">
 		<div class="col-md-6">
@@ -5,7 +10,7 @@
 		</div>
 		<div class="col-md-6">
 			<h1>jService</h1>
-			<h2><%= number_with_delimiter(@count, :delimiter => ',') %> Trivia Questions</h2>
+			<h2><%= number_with_delimiter(@count.round(-2)) %> Trivia Questions</h2>
 			<p>A set of trivia services by <a href="http://github.com/sottenad">@sottenad</a></p>
 			<p><a href="https://github.com/sottenad/jService" class="btn btn-primary btn-large">View On Github</a></p>
 		</div>
@@ -51,6 +56,17 @@
 				<ul>
 					<li><code>id</code>(int): <span class="text-warning">Required</span> the ID of the category to return.</li>
 				</ul>
+		</ul>
+        <h4>/Invalid</h4>
+		<ul>
+			<li>Url: <code>/api/invalid</code></li>
+			<li>Options:
+				<ul>
+					<li><code>id</code>(int): <span class="text-warning">Required</span> the ID of the clue to mark as invalid. <br />
+                                <p>Please mark a clue as invalid when the needed information is not present in the clue. This sometimes happens when clues rely on images or sounds to be answered. When useing jService, you may want to check the invalid_count attribute on clues before using them.</p>
+                    </li>
+				</ul>
+        
 		</ul>
 		<hr />
 		<h3>Popular</h3>
@@ -98,6 +114,28 @@
 		<tr>
 			<td><strong>Air Date</strong></td>
 			<td>{{clean_time airdate}}</td>
+		</tr>
+        <tr>
+			<td><strong>ID</strong></td>
+			<td>{{id}}</td>
+		</tr>
+		<tr>
+			<td><strong>Invalid Count <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="Sometimes clues rely on images or sounds, mark as invalid to help clean the DB"></span></strong></td>
+			<td>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <span id="invalid-count">
+                        {{#if invalid_count}}
+                            {{invalid_count}}
+                        {{else}}
+                            0
+                        {{/if}}
+                        </span>
+                    </div>
+                    <div class="col-sm-6">
+                        <small><a href="#" class="pull-right" id="mark-invalid">Mark Invalid</a></small>
+                    </div>
+            </td>
 		</tr>
 
 	</table>

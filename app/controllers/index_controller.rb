@@ -5,6 +5,7 @@ class IndexController < ApplicationController
   	@count = Clue.count
   end
 
+    
   def about
   end
 end
