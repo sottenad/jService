@@ -15,7 +15,8 @@ $(document).on 'click', '#refresh-question', ->
 setInvalidHandler = () ->
     $(document).on 'click', '#mark-invalid', ->
         $('#mark-invalid').fadeOut(200)
-        markInvalid(48793)
+        clueId = $('#clue-id')
+        markInvalid(clueId)
     
 currData = {}
     

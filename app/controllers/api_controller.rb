@@ -8,7 +8,9 @@ class ApiController < ApplicationController
 		end
 		
 		@result = Clue.all(offset: randNum, :limit => count)
-		
+		#for invalid count testing
+        #@result = Clue.where(id:107790)
+        
 		respond_to do |format|
 			format.json { render :json => @result.to_json(:include => :category) }
 		end	
