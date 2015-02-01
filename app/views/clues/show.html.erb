@@ -16,7 +16,12 @@
           <div class="panel-body">
             <p><strong>Question:</strong> <%= @clue.question %></p>
               <hr />
-            <p><strong>Answer: </strong><%= @clue.answer.humanize %></p>
+            
+            <p>
+                <strong>Answer: </strong> 
+                <a class="btn btn-sm btn-default" id="show-answer">Show</a>
+                <span id="answer"><%= @clue.answer.humanize %></span>
+            </p>
             <small class="pull-right"><em>Airdate: <%= @clue.airdate.strftime('%b %-d %Y') %></em></small>
           </div>
         </div>

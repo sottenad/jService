@@ -74,6 +74,23 @@ h2{
     background:#5cb85c;   
 }
 
+.spoiler{
+    background:#444;
+    color:#444;
+    font-size: 14px;
+    padding:3px 5px;
+    display:inline-block;
+}
+
+.spoiler:hover{
+    background:#fff;
+}
+
+#answer{
+    display:none;
+    padding:5px;
+}
+
 .panel-body{
 
 }

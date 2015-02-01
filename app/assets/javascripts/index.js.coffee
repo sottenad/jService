@@ -4,7 +4,9 @@
 
 
 $ ->
-	refreshRandom(); false
+    qtLength = $("#quiz-template").length
+    refreshRandom() if qtLength > 0
+    
     
 
 $(document).on 'click', '#refresh-question', ->
