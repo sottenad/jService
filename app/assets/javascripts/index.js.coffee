@@ -5,7 +5,7 @@
 
 $ ->
     qtLength = $("#quiz-template").length
-    refreshRandom() if qtLength > 0
+    refreshRandom() if qtLength > 0 
     
     
 
