@@ -17,7 +17,7 @@
 //= require index
 //= require popular
 //= require api
-// =require clues
+//= require clues
 //= require handlebars-v1.3.0
 //= require handlebars-helpers
 
