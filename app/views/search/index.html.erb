@@ -1,0 +1,36 @@
+<%= render "layouts/menu" %>
+
+<ol class="breadcrumb">
+  <li><%= link_to "Home", root_path %></li>
+</ol>
+
+<div class="container">
+    <div class="row">
+        <p>Search Categories</p>
+        <form action="/search" method="get" class="form-inline">
+          <%= text_field_tag 'query', params['query'], :class => 'form-control' %>
+          <%= submit_tag 'Search', :name => nil, :class => 'btn btn-primary' %>
+        </form>
+    </div>
+    <% if !@results.nil? %>
+        <div class="row">
+            <h4><%= @results.count %> Categories for: '<%= params['query'] %>'</h4>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Clue Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @results.each do |category| %>
+                    <tr>
+                        <td><%= link_to category.title, popular_list_path(category) %></td>
+                        <td> <%= category.clues_count %></td>
+                    </tr>
+                <% end %>
+              </tbody>
+            </table>
+        </div>
+    <% end %>
+</div>

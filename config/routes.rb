@@ -1,5 +1,9 @@
 JArchive::Application.routes.draw do
   
+  get "search" => "search#index"
+  get "search/:query" => "search#index", :as => "search_term"
+  
+    
   get "popular" => "popular#index"
   get "popular/:category_id" => "popular#list", :as => "popular_list"
   get "api/random" => "api#random",  defaults: {format: :json}
