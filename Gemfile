@@ -31,8 +31,7 @@ gem 'nokogiri'
 gem 'chronic'
 
 #for search
-gem 'sunspot_rails'
-gem 'sunspot_solr'
+gem 'pg_search'
 
 #this mimics the rails 3 syntax, fix that and remove this at some point.
 gem 'protected_attributes'

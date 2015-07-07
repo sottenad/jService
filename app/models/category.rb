@@ -2,10 +2,9 @@ class Category < ActiveRecord::Base
   attr_accessible :title, :clues_count
   has_many :clues
     
-  searchable do
-    text :title
-    integer :clues_count
-  end
+  include PgSearch
+  pg_search_scope :custom_search, :against => [:title]
+  multisearchable against: [:title]
     
 
   
