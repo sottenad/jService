@@ -14,4 +14,4 @@ View a working demo at http://jservice.io
 ###jService in the wild
 * [jService Twitter Bot](http://twitter.com/jservicebot)
 * [TrebekBot for Slack](https://github.com/gesteves/trebekbot)
-
+* [Trebek for HipChat](https://github.com/yanigisawa/hip-trebek)
