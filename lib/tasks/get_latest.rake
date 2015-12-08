@@ -66,23 +66,20 @@
 		  			var_answer = answermatch.captures[0].to_s
 		 
 		  			#puts var_answer
+					var_question = q.css('.clue_text').text()
+					index =	q.xpath('count(preceding-sibling::*)').to_i
+					var_category = categoryArr[index]
+					var_value = q.css('.clue_value').text[/[0-9\.]+/]
+
+					newClue = Clue.where(
+						:question => var_question,
+						:answer => var_answer,
+						:category => var_category,
+						:value => var_value,
+						:airdate => var_airdate,
+						:game_id => gid
+					).first_or_create
 		  		end
-		
-		  		var_question = q.css('.clue_text').text()
-		  		index =	q.xpath('count(preceding-sibling::*)').to_i
-		  		var_category = categoryArr[index]
-		  		var_value = q.css('.clue_value').text[/[0-9\.]+/]
-		  		
-		  		newClue = Clue.where(
-		  			:question => var_question,
-		  			:answer => var_answer,
-		  			:category => var_category,
-		  			:value => var_value,
-		  			:airdate => var_airdate,
-		  			:game_id => gid
-		  		).first_or_create
-		  		
-		  		
 		  	end
 		 end #each
 	  end #if
