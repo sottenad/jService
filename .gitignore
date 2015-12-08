@@ -14,3 +14,5 @@
 /log/*.log
 /tmp
 trebek.psd
+*.swp
+.DS_Store
