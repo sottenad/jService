@@ -7,8 +7,8 @@ require 'chronic'
 task :get_clues, [:arg1,:arg2]  => :environment  do |t, args|
 arg1int = args.arg1.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
 arg2int = args.arg2.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
-if(arg1int && arg2int)
-#get game list
+if arg1int && arg2int
+  #get game list
   gameIds = Array.new
   for i in args.arg1.to_i..args.arg2.to_i
     seasonsUrl = 'http://j-archive.com/showseason.php?season='+i.to_s
@@ -46,17 +46,21 @@ if(arg1int && arg2int)
 
       #get the airdate
       ad = game.css('#game_title h1').text().split(" - ")
-      if(!ad[1].nil?)
+      if !ad[1].nil?
         var_airdate = Chronic.parse(ad[1])
         puts "Working on: " + ad[1]
       end
 
       questions.each do |q|
         qdiv = q.css('div').first
-        if(!qdiv.nil?)
+        if !qdiv.nil?
           qdivMouseover = qdiv.attr('onmouseover')
           #=========== Set Answer =============
           answermatch = /ponse">(.*)<\/e/.match(qdivMouseover)
+          if answermatch.captures.nil?
+            next # short circuit if no captures
+          end
+
           var_answer = answermatch.captures[0].to_s
 
           #puts var_answer
@@ -64,7 +68,6 @@ if(arg1int && arg2int)
           index = q.xpath('count(preceding-sibling::*)').to_i
           var_category = categoryArr[index]
           var_value = q.css('.clue_value').text[/[0-9\.]+/]
-
           newClue = Clue.where(
             :question => var_question,
             :answer => var_answer,
