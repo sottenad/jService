@@ -29,6 +29,7 @@ GEM
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     builder (3.1.4)
+    byebug (8.2.1)
     chronic (0.10.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -37,8 +38,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.2)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     hike (1.2.3)
     i18n (0.7.0)
     jquery-rails (3.1.2)
@@ -86,6 +93,23 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     ref (1.0.5)
+    rspec-core (3.4.1)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-rails (3.4.0)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
     sass (3.4.10)
     sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -121,8 +145,10 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.1.0)
+  byebug
   chronic
   coffee-rails (~> 4.0.0)
+  factory_girl_rails
   jquery-rails
   nokogiri
   pg
@@ -130,6 +156,10 @@ DEPENDENCIES
   protected_attributes
   rails (= 4.0.2)
   rails_12factor
+  rspec-rails (~> 3.0)
   sass-rails (>= 4.0.0)
   therubyracer
   uglifier (>= 1.0.3)
+
+BUNDLED WITH
+   1.10.6

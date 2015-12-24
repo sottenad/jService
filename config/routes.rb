@@ -1,9 +1,8 @@
 JArchive::Application.routes.draw do
-  
+
   get "search" => "search#index"
   get "search/:query" => "search#index", :as => "search_term"
-  
-    
+
   get "popular" => "popular#index"
   get "popular/:category_id" => "popular#list", :as => "popular_list"
   get "api/random" => "api#random",  defaults: {format: :json}
@@ -11,7 +10,7 @@ JArchive::Application.routes.draw do
   get "api/categories" => "api#categories", defaults: {format: :json}
   get "api/category" => "api#single_category", defaults: {format: :json}
   post "api/invalid" => "api#mark_invalid", defaults: {format: :json}
-    
+
   get "index/home", :as => "home"
   get "index/about"
   resources :game_ids

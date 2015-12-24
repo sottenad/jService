@@ -34,12 +34,12 @@ class ApiController < ApplicationController
   def categories
     offset = params[:offset].present? ? params[:offset] : 0
     count = params[:count].present? ? params[:count] : 1
-    
+
     if(count.to_f > 100)
       count = 100
     end
     @categories = Category.all(:limit => count, :offset => offset)
-    
+
     respond_to do |format|
       format.json { render json: @categories }
     end
@@ -56,9 +56,9 @@ class ApiController < ApplicationController
     @clue = Clue.find(params[:id])
     @clue.increment(:invalid_count,1)
     @clue.save
-    
+
     respond_to do |format|
-      format.json {render :json => @clue.to_json() }    
-    end    
+      format.json {render :json => @clue.to_json() }
+    end
   end
 end
