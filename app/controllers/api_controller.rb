@@ -1,11 +1,11 @@
 class ApiController < ApplicationController
   def random
-    randNum = rand(Clue.count)
     count = params[:count].present? ? params[:count] : 1
-    if(count.to_f > 100)
+    if(count.to_i > 100)
       count = 100
     end
-    @result = Clue.all(offset: randNum, :limit => count)
+
+    @result = Clue.order('RANDOM()').limit(count)
     respond_to do |format|
       format.json { render :json => @result.to_json(:include => :category) }
     end
