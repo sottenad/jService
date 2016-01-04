@@ -16,3 +16,4 @@ View a working demo at http://jservice.io
 * [jService Twitter Bot](http://twitter.com/jservicebot)
 * [TrebekBot for Slack](https://github.com/gesteves/trebekbot)
 * [Trebek for HipChat](https://github.com/yanigisawa/hip-trebek)
+* [jApi - ruby gem for jService](https://github.com/djds23/jApi)
