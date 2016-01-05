@@ -55,12 +55,16 @@ module JArchive
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    
+
     # Disable this to get it to not precompile on heroku when it wont succeed
     #config.assets.initialize_on_precompile = true
-    
+
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.1'
+
+    config.generators do |g|
+      g.test_framework :rspec
+    end
   end
 end

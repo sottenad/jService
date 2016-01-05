@@ -16,3 +16,5 @@
 trebek.psd
 *.swp
 .DS_Store
+
+.byebug_history
