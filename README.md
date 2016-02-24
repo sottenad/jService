@@ -17,3 +17,4 @@ View a working demo at http://jservice.io
 * [TrebekBot for Slack](https://github.com/gesteves/trebekbot)
 * [Trebek for HipChat](https://github.com/yanigisawa/hip-trebek)
 * [jApi - ruby gem for jService](https://github.com/djds23/jApi)
+* [JeoParty - Arduino + Raspberry Pi + React](https://github.com/keithpops/jeoparty)
