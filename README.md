@@ -18,3 +18,4 @@ View a working demo at http://jservice.io
 * [Trebek for HipChat](https://github.com/yanigisawa/hip-trebek)
 * [jApi - ruby gem for jService](https://github.com/djds23/jApi)
 * [JeoParty - Arduino + Raspberry Pi + React](https://github.com/keithpops/jeoparty)
+* [Triviality](https://github.com/artnc/triviality)
