@@ -1,9 +1,9 @@
-##jService
+## jService
 
-###Demo
+### Demo
 View a working demo at http://jservice.io
 
-###Installation
+### Installation
 * clone this repo 
 * In terminal, cd into the directory you cloned into
 * run `bundle install` 
@@ -12,11 +12,10 @@ View a working demo at http://jservice.io
 * visit `http://localhost:3000/clues` or view `config\routes.rb` file for more
 * shoot me a pull request to the readme with your app in the wild!
 
-###jService in the wild
+### jService in the wild
 * [jService Twitter Bot](http://twitter.com/jservicebot)
 * [PotentPotables - Multiplayer/Multi-Channel Real-time App](http://potentpotables.io/)
 * [TrebekBot for Slack](https://github.com/gesteves/trebekbot)
 * [Trebek for HipChat](https://github.com/yanigisawa/hip-trebek)
 * [jApi - ruby gem for jService](https://github.com/djds23/jApi)
 * [JeoParty - Arduino + Raspberry Pi + React](https://github.com/keithpops/jeoparty)
-
