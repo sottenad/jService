@@ -51,17 +51,15 @@ GEM
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.8.2)
-    libv8 (3.16.14.7)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    mini_portile (0.6.2)
+    mini_portile2 (2.4.0)
     minitest (4.7.5)
     multi_json (1.10.1)
-    nokogiri (1.6.5)
-      mini_portile (~> 0.6.0)
+    nokogiri (1.9.1)
+      mini_portile2 (~> 2.4.0)
     pg (0.18.1)
     pg_search (1.0.4)
       activerecord (>= 3.1)
@@ -92,7 +90,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
-    ref (1.0.5)
     rspec-core (3.4.1)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -126,9 +123,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    therubyracer (0.12.1)
-      libv8 (~> 3.16.14.0)
-      ref
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -136,9 +130,6 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.42)
-    uglifier (2.7.0)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
 
 PLATFORMS
   ruby
@@ -150,7 +141,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   jquery-rails
-  nokogiri
+  nokogiri (~> 1.9.1)
   pg
   pg_search
   protected_attributes
@@ -158,8 +149,6 @@ DEPENDENCIES
   rails_12factor
   rspec-rails (~> 3.0)
   sass-rails (>= 4.0.0)
-  therubyracer
-  uglifier (>= 1.0.3)
 
 BUNDLED WITH
-   1.10.6
+   1.17.3

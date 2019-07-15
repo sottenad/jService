@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 gem 'rails', '4.0.2'
 
 
@@ -12,7 +13,7 @@ gem 'bootstrap-sass', '~> 3.1.0'
 gem 'rails_12factor', group: :production
 
 #for scraping
-gem 'nokogiri'
+gem 'nokogiri', '~> 1.9.1'
 gem 'chronic'
 
 #for search
@@ -27,8 +28,8 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer'
-  gem 'uglifier', '>= 1.0.3'
+  # gem 'therubyracer'
+  # gem 'uglifier', '>= 1.0.3'
 end
 
 group :development, :test do
@@ -50,4 +51,3 @@ end
 
 # To use debugger
 # gem 'debugger'
-

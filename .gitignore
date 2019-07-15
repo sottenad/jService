@@ -18,3 +18,6 @@ trebek.psd
 .DS_Store
 
 .byebug_history
+
+# Ignore backup
+*.bak

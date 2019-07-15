@@ -4,8 +4,6 @@ development:
   encoding: unicode
   database: jarchive_development
   pool: 5
-  username: steveo	
-  password: stepheno
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -15,13 +13,9 @@ test:
   encoding: unicode
   database: jarchive_test
   pool: 5
-  username: steveo	
-  password: stepheno
-  
+
 production:
   adapter: postgresql
   encoding: unicode
   database: jarchive_production
   pool: 5
-  username: steveo	
-  password: stepheno
