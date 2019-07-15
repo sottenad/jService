@@ -69,6 +69,7 @@ GEM
     protected_attributes (1.0.8)
       activemodel (>= 4.0.1, < 5.0)
     rack (1.5.2)
+    rack-cors (1.0.3)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.0.2)
@@ -145,6 +146,7 @@ DEPENDENCIES
   pg
   pg_search
   protected_attributes
+  rack-cors
   rails (= 4.0.2)
   rails_12factor
   rspec-rails (~> 3.0)
