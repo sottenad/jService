@@ -32,7 +32,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  # gem 'factory_girl_rails'
   gem 'byebug'
 end
 
@@ -42,3 +42,4 @@ end
 gem 'rack-cors'
 
 gem 'webpacker', '~> 4.x'
+gem 'react-rails'

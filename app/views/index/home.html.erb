@@ -2,7 +2,7 @@
     jService - Over <%= number_with_delimiter(@count.round(-2)) %> trivia questions
 <% end %>
 
-
+<%= react_component 'GreetUser', name: 'me' %>
 <div class="bs-header">
 	<div class="container">
 		<div class="col-md-6">
@@ -31,7 +31,7 @@
 					<li><code>max_date</code>(date): latest date to show, based on original air date</li>
 					<li><code>offset</code>(int): offsets the returned clues. Useful in pagination</li>
 				</ul>
-		</ul> 
+		</ul>
 		<h4>/Random</h4>
 		<ul>
 			<li>Url: <code>/api/random</code></li>
@@ -66,7 +66,7 @@
                                 <p>Please mark a clue as invalid when the needed information is not present in the clue. This sometimes happens when clues rely on images or sounds to be answered. When useing jService, you may want to check the invalid_count attribute on clues before using them.</p>
                     </li>
 				</ul>
-        
+
 		</ul>
 		<hr />
 		<h3>Popular</h3>
@@ -78,22 +78,22 @@
 		<hr />
 		<h3>About</h3>
 		<p>This is in large part a project to learn a bit about screen-scraping and creating an easily consumable set of services for public consumption. I will be offering this free of charge, but on a small Heroku instance until sufficient demand exists. Production use is at your own risk.</p>
-		
-		
-		
-		
+
+
+
+
 	</div>
 	<div class="col-md-5">
 		<div class="panel panel-default" id="quiz-question">
 			<div class="panel-heading">
 				<h4>Random Question<span class="glyphicon glyphicon-refresh" id='refresh-question'></span></h4>
-				
+
 			</div>
 			<div class="panel-body">
 
 			</div>
 		</div>
-	</div>	
+	</div>
 </div>
 
 <script id="quiz-template" type="text/x-handlebars-template">
@@ -147,4 +147,3 @@
 		<pre>{{json .}}</pre>
 	</div>
 </script>
-
