@@ -1,9 +1,10 @@
-
 development:
   adapter: postgresql
   encoding: unicode
   database: jarchive_development
+  host: localhost
   pool: 5
+  username: 'postgres'
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -12,10 +13,14 @@ test:
   adapter: postgresql
   encoding: unicode
   database: jarchive_test
+  host: localhost
   pool: 5
+  username: 'postgres'
 
 production:
   adapter: postgresql
   encoding: unicode
   database: jarchive_production
+  host: localhost
   pool: 5
+  username: 'postgres'
