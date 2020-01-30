@@ -13,6 +13,7 @@ View a working demo at http://jservice.io
 * shoot me a pull request to the readme with your app in the wild!
 
 ### jService in the wild
+* [jService for IRC](https://github.com/oddluck/limnoria-plugins/tree/master/Jeopardy)
 * [jService Twitter Bot](http://twitter.com/jservicebot)
 * [PotentPotables - Multiplayer/Multi-Channel Real-time App](http://potentpotables.io/)
 * [TrebekBot for Slack](https://github.com/gesteves/trebekbot)
