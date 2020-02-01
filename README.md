@@ -16,8 +16,8 @@ View a working demo at http://jservice.io
 ### jService in the wild
 * [jService for IRC](https://github.com/oddluck/limnoria-plugins/tree/master/Jeopardy)
 * [jService Twitter Bot](http://twitter.com/jservicebot)
-* [PotentPotables - Multiplayer/Multi-Channel Real-time App](http://potentpotables.io/)
 * [TrebekBot for Slack](https://github.com/gesteves/trebekbot)
 * [Trebek for HipChat](https://github.com/yanigisawa/hip-trebek)
 * [jApi - ruby gem for jService](https://github.com/djds23/jApi)
 * [JeoParty - Arduino + Raspberry Pi + React](https://github.com/keithpops/jeoparty)
+* [Hip Trivia for HipChat](https://github.com/aarontam/hip-trivia)
