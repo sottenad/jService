@@ -38,7 +38,7 @@ class ApiController < ApplicationController
     if(count.to_f > 100)
       count = 100
     end
-    @categories = Category.all(:limit => count, :offset => offset)
+    @categories = Category.limit(count).offset(offset)
 
     respond_to do |format|
       format.json { render json: @categories }
