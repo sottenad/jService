@@ -1,4 +1,4 @@
-class AddClueCount < ActiveRecord::Migration
+class AddClueCount < ActiveRecord::Migration[4.2]
   def self.up
     add_column :categories, :clues_count, :integer, :default => 0
     

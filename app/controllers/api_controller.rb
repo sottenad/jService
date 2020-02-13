@@ -5,7 +5,7 @@ class ApiController < ApplicationController
       count = 100
     end
 
-    @result = Clue.order('RANDOM()').limit(count)
+    @result = Clue.order(Arel.sql('random()')).limit(count)
     respond_to do |format|
       format.json { render :json => @result.to_json(:include => :category) }
     end
@@ -38,7 +38,7 @@ class ApiController < ApplicationController
     if(count.to_f > 100)
       count = 100
     end
-    @categories = Category.all(:limit => count, :offset => offset)
+    @categories = Category.limit(count).offset(offset)
 
     respond_to do |format|
       format.json { render json: @categories }

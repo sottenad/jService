@@ -40,7 +40,7 @@ class CluesController < ApplicationController
   # POST /clues
   # POST /clues.json
   def create
-    @clue = Clue.new(params[:clue])
+    @clue = Clue.new(clue_params)
 
     respond_to do |format|
       if @clue.save
@@ -59,7 +59,7 @@ class CluesController < ApplicationController
     @clue = Clue.find(params[:id])
 
     respond_to do |format|
-      if @clue.update_attributes(params[:clue])
+      if @clue.update_attributes(clue_params)
         format.html { redirect_to @clue, notice: 'Clue was successfully updated.' }
         format.json { head :no_content }
       else
@@ -79,5 +79,11 @@ class CluesController < ApplicationController
       format.html { redirect_to clues_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def clue_params
+    params.require(:clue).permit(:airdate, :answer, :question, :value, :category_id, :category)
   end
 end
