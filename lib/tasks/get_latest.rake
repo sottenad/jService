@@ -45,7 +45,7 @@
 		  	categoryArr = Array.new
 		  	categories.each do |c|
 			  	categoryName = c.text().downcase
-			  	categoryArr.push(Category.find_or_create_by_title(categoryName))
+			  	categoryArr.push(Category.find_or_create_by(title: categoryName))
 		  	end
 		
 		  	#get the airdate

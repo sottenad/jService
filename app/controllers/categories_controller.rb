@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
       format.json { render json: @categories }
     end
   end
-  
+
 
   # GET /categories/1
   # GET /categories/1.json
@@ -41,7 +41,7 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
-    @category = Category.new(params[:category])
+    @category = Category.new(category_params)
 
     respond_to do |format|
       if @category.save
@@ -60,7 +60,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
 
     respond_to do |format|
-      if @category.update_attributes(params[:category])
+      if @category.update_attributes(category_params)
         format.html { redirect_to @category, notice: 'Category was successfully updated.' }
         format.json { head :no_content }
       else
@@ -80,5 +80,11 @@ class CategoriesController < ApplicationController
       format.html { redirect_to categories_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def category_params
+    params.require(:category).permit(:title, :clues_count)
   end
 end
