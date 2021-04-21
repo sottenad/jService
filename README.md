@@ -20,3 +20,4 @@ View a working demo at http://jservice.io
 * [jApi - ruby gem for jService](https://github.com/djds23/jApi)
 * [JeoParty - Arduino + Raspberry Pi + React](https://github.com/keithpops/jeoparty)
 * [Hip Trivia for HipChat](https://github.com/aarontam/hip-trivia)
+* [Flashcard Jeopardy!](https://codepen.io/DesmondW/full/ExZexOV)
