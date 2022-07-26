@@ -9,6 +9,7 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'sass-rails', '>=6.0.0'
 gem 'bootstrap-sass', '~> 3.4.0'
+gem 'puma'
 
 #for scraping
 gem 'nokogiri'
