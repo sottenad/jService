@@ -147,11 +147,6 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.5)
     railties (7.0.3)
       actionpack (= 7.0.3)
       activesupport (= 7.0.3)
@@ -202,9 +197,11 @@ DEPENDENCIES
   pg
   pg_search
   rails (= 7.0.3)
-  rails_12factor
   sass-rails (>= 6.0.0)
   uglifier (>= 4.2.0)
+
+RUBY VERSION
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.3.18

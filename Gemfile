@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "3.1.2"
 
 gem 'rails', '7.0.3'
 
@@ -8,8 +9,6 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'sass-rails', '>=6.0.0'
 gem 'bootstrap-sass', '~> 3.4.0'
-
-gem 'rails_12factor', group: :production
 
 #for scraping
 gem 'nokogiri'
