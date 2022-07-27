@@ -180,6 +180,8 @@ GEM
     timeout (0.3.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2022.1)
+      tzinfo (>= 1.0.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     websocket-driver (0.7.5)
@@ -202,6 +204,7 @@ DEPENDENCIES
   rails (= 7.0.3)
   sass-rails (>= 6.0.0)
   sprockets (~> 3.0)
+  tzinfo-data
   uglifier (>= 4.2.0)
 
 RUBY VERSION

@@ -15,7 +15,7 @@
   	  	gameIds = Array.new
 	  	for i in args.arg1.to_i..args.arg2.to_i
 	  		seasonsUrl = 'http://j-archive.com/showseason.php?season='+i.to_s
-	  		seasonList = Nokogiri::HTML(open(seasonsUrl))
+	  		seasonList = Nokogiri::HTML(URI.open(seasonsUrl))
 	  		linkList = seasonList.css('table td a')
 	  		linkList.each do |ll|
 	  			href = ll.attr('href');
@@ -27,7 +27,7 @@
 	  	
 	  	gameIds.each do |gid|
 		  	gameurl = 'http://www.j-archive.com/showgame.php?game_id='+gid.to_s
-		  	game = Nokogiri::HTML(open(gameurl))
+		  	game = Nokogiri::HTML(URI.open(gameurl))
 		  	
 		  	## OK, were going to do this twice, once for each round
 		  	questions = game.css("#jeopardy_round .clue")
@@ -45,7 +45,7 @@
 		  	categoryArr = Array.new
 		  	categories.each do |c|
 			  	categoryName = c.text().downcase
-			  	categoryArr.push(Category.find_or_create_by_title(categoryName))
+			  	categoryArr.push(Category.find_or_create_by(title: categoryName))
 		  	end
 		
 		  	#get the airdate
