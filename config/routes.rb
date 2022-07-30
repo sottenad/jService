@@ -6,6 +6,7 @@ JArchive::Application.routes.draw do
   get "popular" => "popular#index"
   get "popular/:category_id" => "popular#list", :as => "popular_list"
   get "api/random" => "api#random",  defaults: {format: :json}
+  get "api/final" => "api#final",  defaults: {format: :json}
   get "api/clues" => "api#clues", defaults: {format: :json}
   get "api/categories" => "api#categories", defaults: {format: :json}
   get "api/category" => "api#single_category", defaults: {format: :json}

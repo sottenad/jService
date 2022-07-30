@@ -1,4 +1,7 @@
 class ApiController < ApplicationController
+
+
+
   def random
     count = params[:count].present? ? params[:count] : 1
     if(count.to_i > 100)
@@ -11,7 +14,20 @@ class ApiController < ApplicationController
     end
   end
 
+  def final
+    count = params[:count].present? ? params[:count] : 1
+    if(count.to_i > 100)
+      count = 100
+    end
+    
+    @result = Clue.where(value: nil).order('RANDOM()').limit(count)
+    respond_to do |format|
+      format.json { render :json => @result.to_json(:include => :category) }
+    end
+  end
+
   def clues
+    require 'chronic'
     clues = Clue
     clues = clues.where("value = ?", params[:value])  if params[:value].present?
     if(params[:min_date].present? && params[:max_date].present?)
@@ -38,7 +54,7 @@ class ApiController < ApplicationController
     if(count.to_f > 100)
       count = 100
     end
-    @categories = Category.all(:limit => count, :offset => offset)
+    @categories = Category.limit(count).offset(offset)
 
     respond_to do |format|
       format.json { render json: @categories }

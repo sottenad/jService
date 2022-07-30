@@ -20,7 +20,7 @@
 <div class="container">
 	<div class="col-md-7">
 		<h3>API Usage</h3>
-		<h4>/Clues</h4>
+		<h4><a href="/api/clues?value=100&min_date=1985-02-20">/Clues</a></h4>
 		<ul>
 			<li>Url: <code>/api/clues</code></li>
 			<li>Options <small class="text-warning">All options are optional</small>:
@@ -32,7 +32,7 @@
 					<li><code>offset</code>(int): offsets the returned clues. Useful in pagination</li>
 				</ul>
 		</ul> 
-		<h4>/Random</h4>
+		<h4><a href="/api/random">/Random</a></h4>
 		<ul>
 			<li>Url: <code>/api/random</code></li>
 			<li>Options:
@@ -40,7 +40,16 @@
 					<li><code>count</code>(int): amount of clues to return, limited to 100 at a time</li>
 				</ul>
 		</ul>
-		<h4>/Categories</h4>
+		<h4><a href="/api/final">/Final</a></h4>
+		<p>Presents random final jeopardy question. <em>Note: all final jeopardy questions have null <kbd>value</kbd></em></p>
+		<ul>
+			<li>Url: <code>/api/final</code></li>
+			<li>Options:
+				<ul>
+					<li><code>count</code>(int): amount of clues to return, limited to 100 at a time</li>
+				</ul>
+		</ul>
+		<h4><a href="/api/categories?count=2">/Categories</a></h4>
 		<ul>
 			<li>Url: <code>/api/categories</code></li>
 			<li>Options:
@@ -49,7 +58,7 @@
 					<li><code>offset</code>(int): offsets the starting id of categories returned. Useful in pagination.</li>
 				</ul>
 		</ul>
-		<h4>/Category</h4>
+		<h4><a href="/api/category?id=150">/Category</a></h4>
 		<ul>
 			<li>Url: <code>/api/category</code></li>
 			<li>Options:
