@@ -19,18 +19,18 @@ JArchive::Application.configure do
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = true
     
-  # Compress JavaScripts and CSS
-  config.assets.compress = true
+  # # Compress JavaScripts and CSS
+  # config.assets.compress = true
 
-  # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = true
+  # # Don't fallback to assets pipeline if a precompiled asset is missed
+  # config.assets.compile = true
 
-  # Generate digests for assets URLs
-  config.assets.digest = true
+  # # Generate digests for assets URLs
+  # config.assets.digest = true
   
-  config.eager_load = true;
+  # config.eager_load = true;
   
-  config.assets.precompile = [/^[-_a-zA-Z0-9]*\..*/]
+  # config.assets.precompile = [/^[-_a-zA-Z0-9]*\..*/]
 
     
   # Defaults to nil and saved in location specified by config.assets.prefix

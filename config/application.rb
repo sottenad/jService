@@ -1,12 +1,11 @@
 require File.expand_path('../boot', __FILE__)
-
 require 'rails/all'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
   #Bundler.require(*Rails.groups(:assets => %w(development test)))
   # If you want your assets lazily compiled in production, use this line
-  Bundler.require(:default, :assets, Rails.env)
+  #Bundler.require(:default, :assets, Rails.env)
 end
 
 module JArchive
@@ -53,17 +52,17 @@ module JArchive
 
 
     # Enable the asset pipeline
-    config.assets.enabled = true
+    #config.assets.enabled = true
 
     # Disable this to get it to not precompile on heroku when it wont succeed
     #config.assets.initialize_on_precompile = true
 
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.1'
+    #config.assets.version = '1.1'
 
-    config.generators do |g|
-      g.test_framework :rspec
-    end
+    # config.generators do |g|
+    #   g.test_framework :rspec
+    # end
   end
 end

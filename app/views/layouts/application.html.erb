@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title><%= content_for?(:title) ? yield(:title) : "jService.io - Jeopardy trivia question API" %></title>
     <%= csrf_meta_tags %>
-
+    
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="/global.css" />
 
 
-    <%= javascript_include_tag "application" %>
+    
   </head>
   <body>
 
@@ -37,5 +37,6 @@
       ga('send', 'pageview');
 
     </script>
+    <script src="/index.js"></script>
   </body>
 </html>
