@@ -1,6 +1,7 @@
 ## jService
 
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="sottenad0" data-color="#40DCA5" data-emoji="💲"  data-font="Lato" data-text="Help Support jservice" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+<p>The costs for running jservice have gone up to approx $200/yr. If you get value from this project, please consider pitching in a few dollars to keep it running</p>
+<a href="https://www.buymeacoffee.com/sottenad0">Help Support jservice</a>
 
 ### Demo
 View a working demo at http://jservice.io
