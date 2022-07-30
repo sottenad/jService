@@ -2,7 +2,7 @@
 
 <p>The costs for running jservice have gone up to approx $200/yr. If you get value from this project, please consider pitching in a few dollars to keep it running</p>
 <a href="https://www.buymeacoffee.com/sottenad0">Help Support jservice</a>
-or venmo me at <a href="https://account.venmo.com/u/steve-ottenad">@steve-ottenad</a>
+or venmo <a href="https://account.venmo.com/u/steve-ottenad">@steve-ottenad</a>
 
 ### Demo
 View a working demo at http://jservice.io
