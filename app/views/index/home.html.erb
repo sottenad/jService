@@ -1,5 +1,5 @@
 <% content_for :title do %>
-    jService - Over <%= number_with_delimiter(@count.round(-2)) %> trivia questions
+    jService - <%= number_with_delimiter(@count.round) %> trivia questions
 <% end %>
 
 
@@ -10,8 +10,8 @@
 		</div>
 		<div class="col-md-6">
 			<h1>jService</h1>
-			<h2><%= number_with_delimiter(@count.round(-2)) %> Trivia Questions</h2>
-			<p>A set of trivia services by <a href="http://github.com/sottenad">@sottenad</a></p>
+			<h2><%= number_with_delimiter(@count.round) %> Trivia Questions</h2>
+			
 			<p><a href="https://github.com/sottenad/jService" class="btn btn-primary btn-large">View On GitHub</a></p>
 		</div>
 	</div>
@@ -57,27 +57,10 @@
 					<li><code>id</code>(int): <span class="text-warning">Required</span> the ID of the category to return.</li>
 				</ul>
 		</ul>
-        <h4>/Invalid</h4>
-		<ul>
-			<li>Url: <code>/api/invalid</code></li>
-			<li>Options:
-				<ul>
-					<li><code>id</code>(int): <span class="text-warning">Required</span> the ID of the clue to mark as invalid. <br />
-                                <p>Please mark a clue as invalid when the needed information is not present in the clue. This sometimes happens when clues rely on images or sounds to be answered. When useing jService, you may want to check the invalid_count attribute on clues before using them.</p>
-                    </li>
-				</ul>
         
-		</ul>
-		<hr />
-		<h3>Popular</h3>
-		<p>Jeopardy&reg; is constantly adding more clues to some of the same popular categories. The categories/clues are stored relationally so we can view the most popular categories, or view all clues associated with a particular category, given its id.</p>
-		<p>
-            <%= link_to "View Popular Categories", popular_path, :class => 'btn btn-default' %>
-            <%= link_to "Search Categories", search_path, :class => 'btn btn-default' %>
-        </p>
 		<hr />
 		<h3>About</h3>
-		<p>This is in large part a project to learn a bit about screen-scraping and creating an easily consumable set of services for public consumption. I will be offering this free of charge, but on a small Heroku instance until sufficient demand exists. Production use is at your own risk.</p>
+		<p>This is in large part a project to learn a bit about screen-scraping and creating an easily consumable set of services for public consumption. I will be offering this free of charge, but on a small Heroku instance until sufficient demand exists. <strong>Production use is at your own risk.</strong></p>
 		
 		
 		
@@ -91,7 +74,40 @@
 			</div>
 			<div class="panel-body">
 
+				<table class="table table-hover table-bordered">
+					<tr>
+						<td><strong>Difficulty</strong></td>
+						<td id="clueValue"></td>
+					</tr>
+					<tr>
+						<td><strong>Category</strong></td>
+						<td id="clueCategory"></td>
+					</tr>
+					<tr>
+						<td><strong>Question</strong></td>
+						<td id="clueQuestion"></td>
+					</tr>
+					<tr>
+						<td><strong>Answer</strong></td>
+						<td id="clueAnswer"></td>
+					</tr>
+					<tr>
+						<td><strong>Air Date</strong></td>
+						<td id="clueAirDate"></td>
+					</tr>
+					<tr>
+						<td><strong>ID</strong></td>
+						<td id="clueId"></td>
+					</tr>
+
+
+				</table>
+				<h5 class="left">Raw Response</h5>
+				<pre id="clueRaw" class="raw">
+
+				</pre>
 			</div>
+
 		</div>
 	</div>	
 </div>

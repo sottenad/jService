@@ -1,4 +1,4 @@
-class CreateClues < ActiveRecord::Migration
+class CreateClues < ActiveRecord::Migration[4.2]
   def change
     create_table :clues do |t|
       t.string :answer

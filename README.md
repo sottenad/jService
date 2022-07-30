@@ -13,6 +13,7 @@ View a working demo at http://jservice.io
 * shoot me a pull request to the readme with your app in the wild!
 
 ### jService in the wild
+* [Jeffpardy - practice your Jeopardy skills!](https://jeffpardy.surge.sh/)
 * [jService Twitter Bot](http://twitter.com/jservicebot)
 * [PotentPotables - Multiplayer/Multi-Channel Real-time App](http://potentpotables.io/)
 * [TrebekBot for Slack](https://github.com/gesteves/trebekbot)
@@ -21,3 +22,4 @@ View a working demo at http://jservice.io
 * [JeoParty - Arduino + Raspberry Pi + React](https://github.com/keithpops/jeoparty)
 * [Hip Trivia for HipChat](https://github.com/aarontam/hip-trivia)
 * [Flashcard Jeopardy!](https://codepen.io/DesmondW/full/ExZexOV)
+* [Jeppy - 6 Question Jeopardy Game](http://jeppy.herokuapp.com)
