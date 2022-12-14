@@ -27,12 +27,3 @@ production:
   password: <%= ENV["DB_PASS"] %>
   host: db.bit.io
   port: 5432
-
-
-
-postgres://steveo:stepheno@localhost:5432/jarchive-development
-psql postgres://steveo:stepheno@localhost:5432/jarchive_development < my-dump.sql
-
-postgresql://sottenad:v2_3wqHL_pfZCu3Xvyvr364MW68X5yay@db.bit.io/sottenad/jservice
-
-psql postgresql://sottenad:v2_3wqHL_pfZCu3Xvyvr364MW68X5yay@db.bit.io/sottenad/jservice < db.sql
