@@ -12,6 +12,7 @@ gem 'tzinfo-data'
 #for scraping
 gem 'nokogiri'
 gem 'chronic'
+gem 'rack-cors'
 
 # #for search
 # gem 'pg_search'
