@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby "3.1.2"
 
 gem 'rails', '7.0.3.1'
+gem 'rack-cors'
 #gem 'sprockets', '~>3.0'
 
 gem 'pg'
@@ -12,7 +13,7 @@ gem 'tzinfo-data'
 #for scraping
 gem 'nokogiri'
 gem 'chronic'
-gem 'rack-cors'
+
 
 # #for search
 # gem 'pg_search'
