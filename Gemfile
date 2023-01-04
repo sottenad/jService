@@ -15,6 +15,9 @@ gem 'nokogiri'
 gem 'chronic'
 
 
+gem 'rack-attack'
+
+
 # #for search
 # gem 'pg_search'
 

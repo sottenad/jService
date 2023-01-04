@@ -1,0 +1,1 @@
+Rack::Attack.blocklist_ip("34.70.41.112")
