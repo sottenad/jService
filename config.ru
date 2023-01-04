@@ -2,3 +2,6 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 run JArchive::Application
+
+require "rack/attack"
+use Rack::Attack
