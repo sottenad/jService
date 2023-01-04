@@ -7,8 +7,9 @@ class ApiController < ApplicationController
     if(count.to_i > 100)
       count = 100
     end
-
-    @result = Clue.order('RANDOM()').limit(count)
+    logger.info "Processing the request..."
+    logger.info request.remote_ip
+    @result = Clue.order('RAND()').first(count)
     respond_to do |format|
       format.json { render :json => @result.to_json(:include => :category) }
     end

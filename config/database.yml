@@ -4,6 +4,7 @@ development:
   encoding: unicode
   database: jarchive_development
   pool: 5
+  host: localhost
   username: steveo	
   password: stepheno
 
