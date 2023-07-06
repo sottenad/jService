@@ -9,7 +9,7 @@ class ApiController < ApplicationController
     end
 
     
-    @result = Clue.from('"clues" TABLESAMPLE SYSTEM (1)').limit(1)
+    @result = Clue.from('"clues" TABLESAMPLE SYSTEM (1)').limit(count)
 
     #@result = Clue.order(Arel.sql('RANDOM()')).limit(count)
     respond_to do |format|
