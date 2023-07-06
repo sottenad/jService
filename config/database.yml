@@ -8,6 +8,16 @@ development:
   username: steveo	
   password: stepheno
 
+# development:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: postgres
+#   pool: 5
+#   username: postgres	
+#   password: stepheno
+#   host: database-1.cujivdbowejw.us-east-2.rds.amazonaws.com
+#   port: 5432
+
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
@@ -22,7 +32,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: database-1
+  database: postgres
   pool: 5
   username: postgres	
   password: <%= ENV["DB_PASS"] %>
