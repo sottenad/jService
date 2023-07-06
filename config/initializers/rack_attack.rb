@@ -3,7 +3,7 @@ Rack::Attack.throttle("requests by ip", limit: 10, period: 60) do |request|
   end
   
 # Block requests from 1.2.3.4
-Rack::Attack.blocklist_ip('block 34.70.41.112') do |req|
+Rack::Attack.blocklist_ip('34.70.41.112') do |req|
   # Requests are blocked if the return value is truthy
   '34.70.41.112' == req.ip
 end
