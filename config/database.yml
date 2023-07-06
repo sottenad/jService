@@ -22,9 +22,9 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: sottenad/jservice
+  database: database-1
   pool: 5
-  username: sottenad	
+  username: postgres	
   password: <%= ENV["DB_PASS"] %>
-  host: db.bit.io
+  host: database-1.cujivdbowejw.us-east-2.rds.amazonaws.com
   port: 5432
