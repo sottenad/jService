@@ -14,7 +14,7 @@ development:
 #   database: postgres
 #   pool: 5
 #   username: postgres	
-#   password: stepheno
+#   password: 
 #   host: database-1.cujivdbowejw.us-east-2.rds.amazonaws.com
 #   port: 5432
 
