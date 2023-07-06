@@ -1,9 +1,11 @@
-Rack::Attack.throttle("requests by ip", limit: 10, period: 60) do |request|
+Rack::Attack.throttle("requests by ip", limit: 10, period: 30) do |request|
     request.ip
   end
   
-# Block requests from 1.2.3.4
-Rack::Attack.blocklist_ip('34.70.41.112') do |req|
-  # Requests are blocked if the return value is truthy
-  '34.70.41.112' == req.ip
+
+
+bad_ips = ['34.70.41.112', '23.159.16.216'] # Pulled from a external API on app boot.
+# Block these IPs
+Rack::Attack.blocklist "block known bad IP address" do |req|
+  bad_ips.include?(req.ip)
 end
