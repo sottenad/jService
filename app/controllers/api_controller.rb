@@ -8,6 +8,7 @@ class ApiController < ApplicationController
       count = 100
     end
 
+    
     @result = Clue.from('"clues" TABLESAMPLE SYSTEM (1)').limit(1)
 
     #@result = Clue.order(Arel.sql('RANDOM()')).limit(count)
