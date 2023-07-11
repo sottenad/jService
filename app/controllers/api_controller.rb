@@ -9,9 +9,9 @@ class ApiController < ApplicationController
     end
 
     
-    @result = Clue.from('"clues" TABLESAMPLE SYSTEM (100)').limit(count)
+    #@result = Clue.from('"clues" TABLESAMPLE SYSTEM (100)').limit(count)
 
-    #@result = Clue.order(Arel.sql('RANDOM()')).limit(count)
+    @result = Clue.order(Arel.sql('RANDOM()')).limit(count)
     respond_to do |format|
       format.json { render :json => @result.to_json(:include => :category) }
     end
