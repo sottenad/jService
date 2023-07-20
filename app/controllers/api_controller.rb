@@ -39,7 +39,7 @@ class ApiController < ApplicationController
       clues = clues.where("airdate > ?", Chronic.parse(params[:min_date])) if params[:min_date].present?
       clues = clues.where("airdate < ?", Chronic.parse(params[:max_date])) if params[:max_date].present?
     end
-
+    clues = clues.where("game_id = ?", params[:game_id]) if params[:game_id].present?
     clues = clues.where("category_id = ?", params[:category]) if params[:category].present?
     offset = params[:offset].present? ? params[:offset] : 0
 
