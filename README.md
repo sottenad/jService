@@ -1,3 +1,6 @@
+# Jservice.io is no longer running
+Sorry for the inconvenience. 
+
 ## jService
 
 <p>The costs for running jservice have gone up to approx $200/yr. If you get value from this project, please consider pitching in a few dollars to keep it running</p>
