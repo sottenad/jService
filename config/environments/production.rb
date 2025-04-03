@@ -28,7 +28,7 @@ JArchive::Application.configure do
   # # Generate digests for assets URLs
   # config.assets.digest = true
   
-  # config.eager_load = true;
+  config.eager_load = true;
   
   # config.assets.precompile = [/^[-_a-zA-Z0-9]*\..*/]
 

@@ -60,13 +60,8 @@
 		  		qdiv = q.css('div').first
 		
 		  		if(!qdiv.nil?)
-		  			qdivMouseover = qdiv.attr('onmouseover')
-		  			#=========== Set Answer =============
-		  			answermatch = /ponse">(.*)<\/e/.match(qdivMouseover)
-		  			var_answer = answermatch.captures[0].to_s
-		 
-		  			#puts var_answer
-					var_question = q.css('.clue_text').text()
+					var_question = q.css('.clue_text[1]').text()
+					var_answer = q.css('.correct_response').text()
 					index =	q.xpath('count(preceding-sibling::*)').to_i
 					var_category = categoryArr[index]
 					var_value = q.css('.clue_value').text[/[0-9\.]+/]

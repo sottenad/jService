@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby "3.1.2"
+ruby "3.4.1"
 
-gem 'rails', '7.0.3.1'
+gem 'rails', '8.0.1'
 gem 'rack-cors'
 #gem 'sprockets', '~>3.0'
 
